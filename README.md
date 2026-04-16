@@ -33,7 +33,7 @@ To start the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3009](http://localhost:3009) with your browser to see the result.
 
 ### Build for Production
 
@@ -48,3 +48,14 @@ To run the production build:
 ```bash
 npm start
 ```
+
+## Demo Credentials
+
+Use the following credentials to access the different portals:
+
+| Role    | Email                | Password   |
+| :------ | :------------------- | :--------- |
+| Admin   | `admin@dimms.in`     | `12345678` |
+| Faculty | `faculty@dimms.in`   | `12345678` |
+| Mentor  | `mentor@dimms.in`    | `12345678` |
+| Student | `student@dimms.in`   | `12345678` |

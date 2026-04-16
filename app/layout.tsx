@@ -1,17 +1,16 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { AuroraBackground } from "@/components/ui/aurora-background"
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: 'DIMMS - Digital Internship & Mentorship Management System',
-  description: 'A comprehensive platform for managing internships, mentorships, task tracking, and academic oversight.',
+  description: 'Digital Internship & Mentorship Management System',
   generator: 'v0.app',
-
 }
 
 export default function RootLayout({
@@ -21,8 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
-        {children}
+      <body className={`${inter.variable} font-sans antialiased text-white selection:bg-purple-500/30`}>
+        <AuroraBackground>
+          {children}
+        </AuroraBackground>
         <Analytics />
       </body>
     </html>

@@ -1,35 +1,13 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { getAuthUser } from '@/lib/auth';
+import { HeroSection } from "@/components/HeroSection";
+import { LoginCard } from "@/components/LoginCard";
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    const user = getAuthUser();
-    if (user) {
-      switch (user.role) {
-        case 'admin':
-          router.push('/admin');
-          break;
-        case 'student':
-          router.push('/student');
-          break;
-        case 'mentor':
-          router.push('/mentor');
-          break;
-        case 'faculty':
-          router.push('/faculty');
-          break;
-        default:
-          router.push('/login');
-      }
-    } else {
-      router.push('/login');
-    }
-  }, [router]);
-
-  return null;
+  return (
+    <main className="relative min-h-screen w-full overflow-hidden text-white selection:bg-indigo-500/30">
+      <div className="relative z-10 flex flex-col items-center w-full pb-20">
+        <HeroSection />
+        <LoginCard />
+      </div>
+    </main>
+  );
 }

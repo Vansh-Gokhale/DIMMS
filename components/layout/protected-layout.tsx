@@ -62,7 +62,7 @@ export function ProtectedLayout({ children, allowedRoles }: ProtectedLayoutProps
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-card sticky top-0 z-50">
+      <header className="border-b border-white/10 bg-white/5 backdrop-blur-lg sticky top-0 z-50">
         <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto w-full">
           <div className="flex items-center gap-4">
             <h1 className="font-bold text-lg">DIMMS</h1>
@@ -95,7 +95,7 @@ export function ProtectedLayout({ children, allowedRoles }: ProtectedLayoutProps
         </div>
       </header>
 
-      <main className="flex-1 bg-muted/30">
+      <main className="flex-1">
         <div className="max-w-7xl mx-auto p-6">{children}</div>
       </main>
     </div>
